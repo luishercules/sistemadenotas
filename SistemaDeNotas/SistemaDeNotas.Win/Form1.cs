@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaDeNotas.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace SistemaDeNotas.Win
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var alumnosBL = new AlumnosBL();
+            var listadeAlumnos = alumnosBL.ObtenerAlumnos();
+
+            foreach (var alumnos in listadeAlumnos)
+            {
+                MessageBox.Show(alumnos.Nombre);
+            }
         }
     }
 }

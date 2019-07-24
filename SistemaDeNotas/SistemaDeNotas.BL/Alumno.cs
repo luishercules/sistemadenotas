@@ -10,6 +10,6 @@ namespace SistemaDeNotas.BL
     {
         public int Id { get; set; }
         public String Nombre { get; set; }
-        public double Nota { get; set; }
+        public double Notas { get; set; }
     }
 }

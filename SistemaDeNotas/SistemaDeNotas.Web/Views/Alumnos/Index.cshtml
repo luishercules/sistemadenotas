@@ -1,11 +1,33 @@
-﻿@model List<SistemaDeNotas.Web.Models.AlumnoModel>
+﻿@model List<SistemaDeNotas.BL.Alumno> 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Alumnos</h2>
 
-@foreach (var alumno in Model)
-{
-    <p>@alumno.Id @alumno.Nombre</p>
-}
+<table class="table table-bordered table-hover ">
+    <thead>
+        <tr>
+            <th>
+                Codigo
+            </th>
+              <th>
+                Nombre
+            </th>
+            <th>
+                Notas
+            </th>
+        </tr>
+    </thead>
+        
+
+    @foreach (var alumno in Model)
+    {
+        <tr>
+            <td>@alumno.Id</td>
+            <td>@alumno.Nombre</td>
+            <td>@alumno.Notas</td>
+        </tr>
+    }
+ 
+</table>
