@@ -16,17 +16,10 @@ namespace SistemaDeNotas.Win
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             var alumnosBL = new AlumnosBL();
             var listadeAlumnos = alumnosBL.ObtenerAlumnos();
 
-            foreach (var alumnos in listadeAlumnos)
-            {
-                MessageBox.Show(alumnos.Nombre);
-            }
+            listadeAlumnosBindingSource.DataSource = listadeAlumnos;
         }
     }
 }
