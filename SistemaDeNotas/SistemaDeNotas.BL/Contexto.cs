@@ -15,12 +15,13 @@ namespace SistemaDeNotas.BL
         {
 
         }
-
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
         public DbSet <Alumno> Alumnos { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
     }
 }
