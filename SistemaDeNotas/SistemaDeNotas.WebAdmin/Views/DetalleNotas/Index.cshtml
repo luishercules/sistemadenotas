@@ -1,0 +1,61 @@
+﻿    @model IEnumerable<SistemaDeNotas.BL.Nota>
+
+@{
+    ViewBag.Title = "Ver Nota";
+}
+
+<h2>Detalle de Nota </h2>
+
+
+
+<table class="table">
+    <tr>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.PrimerParcial )
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SegundoParcial )
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TercerParcial )
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NotaFinal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimerParcial )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SegundoParcial )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TercerParcial )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotaFinal )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Observacion)
+       
+        </td>
+
+
+       
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id=item.Id }) |
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

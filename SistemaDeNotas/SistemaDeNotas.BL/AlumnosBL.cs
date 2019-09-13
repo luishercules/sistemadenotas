@@ -23,7 +23,7 @@ namespace SistemaDeNotas.BL
         public List<Alumno> ObtenerAlumnos()
         {
             ListadeAlumnos = _contexto.Alumnos
-                .Include("Categoria")
+                .Include("Carrera")
                 .ToList();  
             return ListadeAlumnos;
         }
@@ -45,7 +45,7 @@ namespace SistemaDeNotas.BL
         public Alumno ObtenerAlumnos(int Id)
         {
             var alumno = _contexto.Alumnos
-                  .Include("Categoria").FirstOrDefault(p => p.Id == Id);
+                  .Include("Carrera").FirstOrDefault(p => p.Id == Id);
                 return alumno;
         }
 

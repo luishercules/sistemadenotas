@@ -1,4 +1,4 @@
-﻿@model SistemaDeNotas.BL.Categoria
+﻿@model SistemaDeNotas.BL.Carrera
 
 @{
     ViewBag.Title = "Editar";
@@ -11,7 +11,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Categoria</h4>
+        <h4>Carreras</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)

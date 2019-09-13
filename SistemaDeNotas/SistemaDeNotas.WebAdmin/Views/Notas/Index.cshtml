@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SistemaDeNotas.BL.Nota>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Notas</h2>
+
+<p>
+    @Html.ActionLink("Nueva Nota", "Crear")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Alumno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asignatura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NotaFinal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alumno.Nombre )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asignatura.Nombre )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotaFinal )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Activo)
+        </td>
+        <td>
+           
+            @Html.ActionLink("Ver Nota", "Index", "DetalleNotas", new { id=item.Id }, null)
+        </td>
+    </tr>
+}
+
+</table>

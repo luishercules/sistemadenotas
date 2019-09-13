@@ -20,9 +20,9 @@ namespace SistemaDeNotas.BL
         [MaxLength(20, ErrorMessage = "Ingrese maximo 20 caracteres")]
 
         public string Nombre { get; set; }
-        public int CategoriaId { get; set; }
-        public string Descripcion { get; set; }//Pertenece a Categorías
-        public Categoria Categoria { get; set; }
+        public int CarreraId { get; set; }
+        public string Descripcion { get; set; }//Pertenece a Carreras
+        public Carrera Carrera { get; set; }
 
         [Required(ErrorMessage = "Ingrese la Nota")]
         [Range(0, 100, ErrorMessage = "Ingrese una nota entre 0 a 100")]

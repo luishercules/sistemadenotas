@@ -22,6 +22,12 @@ namespace SistemaDeNotas.BL
         }
 
         public DbSet <Alumno> Alumnos { get; set; }
-        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Carrera> Carreras { get; set; }
+        public DbSet<Asignatura> Asignaturas { get; set; }
+
+        public DbSet<Nota> Notas { get; set; }
+        public DbSet<DetalleNota> DetalleNota { get; set; }
+
     }
 }
+ 

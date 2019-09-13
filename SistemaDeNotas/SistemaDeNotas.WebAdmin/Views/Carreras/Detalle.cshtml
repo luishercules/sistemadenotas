@@ -1,4 +1,4 @@
-﻿@model SistemaDeNotas.BL.Categoria
+﻿@model SistemaDeNotas.BL.Carrera
 
 @{
     ViewBag.Title = "Detalle";
@@ -7,7 +7,7 @@
 <h2>Detalle</h2>
 
 <div>
-    <h4>Categoria</h4>
+    <h4>Carreras</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -21,6 +21,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) 
     @Html.ActionLink("Back to List", "Index")
 </p>

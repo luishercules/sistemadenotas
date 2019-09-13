@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace SistemaDeNotas.BL
 {
-    public class Categoria
+    public class Carrera
     {
         public int Id { get; set; }
 
-       [Required(ErrorMessage ="Ingrese la Categoria")]
+       [Required(ErrorMessage ="Ingrese la Carrera")]
         public string Descripcion { get; set; }
     
     }

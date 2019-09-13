@@ -1,6 +1,6 @@
-﻿@model SistemaDeNotas.BL.Categoria
+﻿
+@model SistemaDeNotas.BL.Carrera
    
-
 @{
     ViewBag.Title = "Crear";
 }
@@ -12,9 +12,9 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Categoria</h4>
+        <h4>Carrera</h4>
         <hr />
-        @Html.ValidationSummary(true, "Categoria", new { @class = "text-danger" })
+        @Html.ValidationSummary(true, "Carrera", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model =>model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">

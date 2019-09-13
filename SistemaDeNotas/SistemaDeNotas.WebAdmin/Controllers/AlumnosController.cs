@@ -10,12 +10,12 @@ namespace SistemaDeNotas.WebAdmin.Controllers
     public class AlumnosController : Controller
     {
         AlumnosBL _alumnosBL;
-        CategoriasBL _categoriasBL;
+        CarrerasBL _carrerasBL;
 
         public AlumnosController()
         {
             _alumnosBL = new AlumnosBL();
-            _categoriasBL = new CategoriasBL();
+            _carrerasBL = new CarrerasBL();
         }
         // GET: Alumnos
         public ActionResult Index()
@@ -28,9 +28,9 @@ namespace SistemaDeNotas.WebAdmin.Controllers
        public ActionResult Crear()
         {
             var nuevoAlumno = new Alumno();
-            var categorias = _categoriasBL.ObtenerCategorias();
+            var Carreras = _carrerasBL.ObtenerCarreras();
 
-            ViewBag.CategoriaId = new SelectList(categorias, "Id", "Descripcion");
+            ViewBag.CarreraId = new SelectList(Carreras, "Id", "Descripcion");
 
              return View(nuevoAlumno);
         }
@@ -40,9 +40,9 @@ namespace SistemaDeNotas.WebAdmin.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (alumno.CategoriaId == 0)
+                if (alumno.CarreraId == 0)
                    {
-                    ModelState.AddModelError("CategoriaId", "Seleccione una categoria");
+                    ModelState.AddModelError("CarreraId", "Seleccione una Carrera");
                     return View(alumno);
                 }
 
@@ -54,9 +54,9 @@ namespace SistemaDeNotas.WebAdmin.Controllers
 
                 return RedirectToAction("Index");
             }
-            var categorias = _categoriasBL.ObtenerCategorias();
+            var Carreras = _carrerasBL.ObtenerCarreras();
 
-            ViewBag.CategoriaId = new SelectList(categorias, "Id", "Descripcion");
+            ViewBag.CarreraId = new SelectList(Carreras, "Id", "Descripcion");
 
             return View(alumno);  
         }
@@ -64,9 +64,9 @@ namespace SistemaDeNotas.WebAdmin.Controllers
         public ActionResult Editar (int Id )
         {
            var alumno = _alumnosBL.ObtenerAlumnos(Id);
-            var categorias = _categoriasBL.ObtenerCategorias();
+            var Carreras = _carrerasBL.ObtenerCarreras();
 
-            ViewBag.CategoriaId = new SelectList (categorias, "Id", "Descripcion", alumno.CategoriaId);
+            ViewBag.CarreraId = new SelectList (Carreras, "Id", "Descripcion", alumno.CarreraId);
            return View(alumno);
         }
 
@@ -75,17 +75,17 @@ namespace SistemaDeNotas.WebAdmin.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (alumno.CategoriaId == 0)
+                if (alumno.CarreraId == 0)
                 {
-                    ModelState.AddModelError("CategoriaId", "Seleccione una categoria");
+                    ModelState.AddModelError("CarreraId", "Seleccione una Carrera");
                     return View(alumno);
                 }
                 _alumnosBL.GuardarAlumno(alumno);
                 return RedirectToAction("Index");
             }
-            var categorias = _categoriasBL.ObtenerCategorias();
+            var Carreras = _carrerasBL.ObtenerCarreras();
 
-            ViewBag.CategoriaId = new SelectList(categorias, "Id", "Descripcion");
+            ViewBag.CarreraId = new SelectList(Carreras, "Id", "Descripcion");
 
             return View(alumno);
         }
@@ -93,7 +93,7 @@ namespace SistemaDeNotas.WebAdmin.Controllers
        
         public ActionResult Detalle (int Id)
         {
-            var alumno = _alumnosBL.ObtenerAlumnos(Id);;
+            var alumno = _alumnosBL.ObtenerAlumnos(Id);
 
              return View(alumno);
         }

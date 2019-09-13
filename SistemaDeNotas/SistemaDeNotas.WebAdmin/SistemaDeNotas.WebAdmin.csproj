@@ -143,8 +143,11 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AlumnosController.cs" />
-    <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\AsignaturasController.cs" />
+    <Compile Include="Controllers\CarrerasController.cs" />
+    <Compile Include="Controllers\DetalleNotasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NotasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -168,11 +171,20 @@
     <Content Include="Views\Alumnos\Editar.cshtml" />
     <Content Include="Views\Alumnos\Detalle.cshtml" />
     <Content Include="Views\Alumnos\Eliminar.cshtml" />
-    <Content Include="Views\Categorias\Crear.cshtml" />
-    <Content Include="Views\Categorias\Editar.cshtml" />
-    <Content Include="Views\Categorias\Eliminar.cshtml" />
-    <Content Include="Views\Categorias\Index.cshtml" />
-    <Content Include="Views\Categorias\Detalle.cshtml" />
+    <Content Include="Views\Carreras\Crear.cshtml" />
+    <Content Include="Views\Carreras\Editar.cshtml" />
+    <Content Include="Views\Carreras\Eliminar.cshtml" />
+    <Content Include="Views\Carreras\Index.cshtml" />
+    <Content Include="Views\Carreras\Detalle.cshtml" />
+    <Content Include="Views\Asignaturas\Index.cshtml" />
+    <Content Include="Views\Asignaturas\Crear.cshtml" />
+    <Content Include="Views\Asignaturas\Detalle.cshtml" />
+    <Content Include="Views\Asignaturas\Editar.cshtml" />
+    <Content Include="Views\Asignaturas\Eliminar.cshtml" />
+    <Content Include="Views\Notas\Crear.cshtml" />
+    <Content Include="Views\Notas\Index.cshtml" />
+    <Content Include="Views\DetalleNotas\Index.cshtml" />
+    <Content Include="Views\Notas\Eliminar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

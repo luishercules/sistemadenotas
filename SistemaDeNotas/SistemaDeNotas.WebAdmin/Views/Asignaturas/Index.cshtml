@@ -1,32 +1,32 @@
-﻿@model IEnumerable<SistemaDeNotas.BL.Alumno>
+﻿@model IEnumerable<SistemaDeNotas.BL.Asignatura>
 
 @{
-    ViewBag.Title = "";
+    ViewBag.Title = "Index";
 }
 
-<h2>Agregue y Modifique Alumnos:</h2>
+<h2>Agregue y Modifique Asignaturas:</h2>
 
 <p>
-    @Html.ActionLink("Nuevo Alumno", "Crear")
+    @Html.ActionLink("Nueva Asignatura", "Crear")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Nombre)
         </th>
-
+       
         <th>
-            @Html.DisplayNameFor(model => model.Carrera)
-        </th>
-
-
-        <th>
-            @Html.DisplayNameFor(model => model.UrlImagen)
+            @Html.DisplayNameFor(model => model.Hora)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Activo)
+            @Html.DisplayNameFor(model => model.Catedratico)
         </th>
-        
+        <th>
+            @Html.DisplayNameFor(model => model.Aula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
         <th></th>
     </tr>
 
@@ -35,18 +35,18 @@
         <td>
             @Html.DisplayFor(modelItem => item.Nombre)
         </td>
-     
+      
         <td>
-            @Html.DisplayFor(modelItem => item.Carrera.Descripcion)
-        </td>
-
-   
-     
-        <td>
-            <img src="@item.UrlImagen" alt="@item.Descripcion" style="width:64px; height:auto;" />
+            @Html.DisplayFor(modelItem => item.Hora)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Activo)
+            @Html.DisplayFor(modelItem => item.Catedratico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
         </td>
         <td>
             @Html.ActionLink("Editar", "Editar", new { id=item.Id }) |

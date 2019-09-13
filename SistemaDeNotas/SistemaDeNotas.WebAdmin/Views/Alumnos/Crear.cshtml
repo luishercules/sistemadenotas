@@ -24,23 +24,12 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CategoriaId,"CategoriaId", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CarreraId,"Carrera", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("CategoriaId", null, htmlAttributes: new  { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.CategoriaId, "", new { @class = "text-danger" })
+                @Html.DropDownList("CarreraId", null, htmlAttributes: new  { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Carrera, "", new { @class = "text-danger" })
             </div>
         </div>
-
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Notas, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Notas, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Notas, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
 
         <div class="form-group">
             <label class="control-label col-md-12">Seleccionar Imagen </label>
